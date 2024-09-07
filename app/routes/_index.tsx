@@ -1,38 +1,55 @@
+import Hero from "@/components/landing/hero/Hero";
 import type { MetaFunction } from "@remix-run/node";
+import HeroProof from "@/components/landing/hero/HeroProof";
+import Reviews from "@/components/landing/reviews/ScrollingReviews";
+import Features from "@/components/landing/features/Features";
+import StepsToDownload from "@/components/landing/explanation/Explanation";
+import Pricing from "@/components/landing/pricing/Pricing";
+import FAQs from "@/components/landing/faqs/FAQs";
+import Footer from "@/components/landing/Footer";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
-  ];
+    return [
+        { title: "WorkSync.AI" },
+        { name: "description", content: "Ready to find a job? Meet your AI solution." },
+    ];
 };
 
 export default function Index() {
-  return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix (SPA Mode)</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/guides/spa-mode"
-            rel="noreferrer"
-          >
-            SPA Mode Guide
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
+    return (
+        <div className="w-screen h-screen">
+            <LandingPage />
+        </div>
+    );
+}
+
+const LandingPage = () => {
+    return (
+        <>
+            <div className="overflow-hidden mt-20">
+                <Hero />
+                <HeroProof />
+                <Reviews />
+                <Features />
+                <StepsToDownload />
+                <Pricing />
+                <FAQs />
+            </div>
+            <Footer />
+        </>
+    );
+};
+
+{
+    /* <div className="overflow-hidden -mt-[96px]">
+    <Hero />
+    <HeroProof />
+    <SpotlightSection />
+    <Reviews />
+    <Features />
+    <HowItWorks />
+    <Pricing />
+    <FAQs />
+</div>
+<Footer /> */
 }
