@@ -87,7 +87,7 @@ const NavLink = (props: {
 
 const LoginButton = () => (
     <Link
-        to="/login"
+        to="https://www.worksync.ai/login"
         className="hidden lg:flex">
         <Button
             variant={"outline"}
