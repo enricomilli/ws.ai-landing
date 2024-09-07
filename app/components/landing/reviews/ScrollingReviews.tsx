@@ -77,7 +77,7 @@ const Reviews = () => {
         href="https://chromewebstore.google.com/detail/worksyncai-browser-extens/fhgalfkajbagfafnfofdkpamchjhfgce?hl=en"
         target="_blank"
         rel="noopener noreferrer">
-        <Button className="w-full h-full gap-2">
+        <Button size={"lg"} className="w-full h-full gap-2">
           <span>See all reviews</span>
           <OutGoingLinkIcon stroke="currentColor" />
         </Button>

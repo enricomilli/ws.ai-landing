@@ -65,7 +65,7 @@ const AnimatedHeroTitle = (props: { title: string }) => {
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "anticipate" }}
-      className="text-4xl md:text-5xl px-10 font-semibold mb-6 md:px-0 md:min-w-[550px] max-w-[700px] mx-auto text-primary-content ">
+      className="text-4xl md:text-5xl md:px-10 font-semibold mb-6 md:min-w-[550px] max-w-[700px] mx-auto text-primary-content ">
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
