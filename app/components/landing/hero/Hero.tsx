@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Notification from "./Notification";
 import { HeroContent } from "@/constants/constants";
@@ -9,6 +9,9 @@ import { Button } from "@/components/ui/button";
 import { VideoPopup } from "./VideoPopup";
 import { motion } from "framer-motion";
 import { SparklesIcon } from "lucide-react";
+import GetApplicationsSubmitted from "@/api/GetApplicationsSubmitted";
+import { Spinner } from "@/components/Loading";
+import AnimatedCounter from "./AnimatedCounter";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -31,15 +34,13 @@ const Hero = () => {
                         /> */}
             <AnimatedHeroTitle title={HeroContent.headline} />
             <AnimatedBodyText text={HeroContent.callout} />
-            {/* <p className="body-1 mx-auto px-3 md:px-0 mb-6 lg:mb-8 max-w-[500px] md:max-w-[680px]">
-                            {HeroContent.callout}
-                        </p> */}
           </div>
           <AnimatedVideoDiv
             videoSrc={HeroContent.video}
             thumbnailSrc={HeroContent.thumbnail}
           />
-          <span className="mx-auto pt-10 flex flex-row items-center justify-center gap-5">
+          <NumOfAppsSubmitted />
+          <span className="mx-auto flex flex-row items-center justify-center gap-5">
             <Link
               to="https://www.worksync.ai/purchase" className="w-full h-full">
               <Button
@@ -132,3 +133,28 @@ const AnimatedVideoDiv = (props: { videoSrc: string, thumbnailSrc: string }) => 
     </motion.div>
   );
 };
+
+
+const NumOfAppsSubmitted = () => {
+
+  const [appsSubmitted, setAppsSubmitted] = useState(0)
+
+  useEffect(() => {
+    (async () => {
+      const res = await GetApplicationsSubmitted()
+      setAppsSubmitted(res)
+    })()
+  }, [])
+
+  return (
+    <div className="mx-auto flex flex-col gap-2 items-center justify-center text-xl">
+      <span>
+        Number of Job Apps Submitted:
+      </span>
+      <span className="font-semibold">
+        {appsSubmitted > 0 && <AnimatedCounter from={0} to={appsSubmitted} />}
+        {appsSubmitted < 1 && <Spinner size={4} />}
+      </span>
+    </div>
+  )
+}
