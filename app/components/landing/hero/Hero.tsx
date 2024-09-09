@@ -7,7 +7,6 @@ import { Link } from "@remix-run/react";
 import { Button } from "@/components/ui/button";
 import { VideoPopup } from "./VideoPopup";
 import { motion } from "framer-motion";
-import { SparklesIcon } from "lucide-react";
 import GetApplicationsSubmitted from "@/api/GetApplicationsSubmitted";
 import { Spinner } from "@/components/Loading";
 import AnimatedCounter from "./AnimatedCounter";
@@ -31,7 +30,7 @@ const Hero = () => {
                             el="p"
                             className="text-h1 font-semibold mb-6 px-8 md:px-0 md:min-w-[550px] max-w-[900px] mx-auto text-primary-content"
                         /> */}
-            <AnimatedHeroTitle title={HeroContent.headline} />
+            <AnimatedHeroTitle />
             <AnimatedBodyText text={HeroContent.callout} />
           </div>
           <AnimatedVideoDiv
@@ -58,27 +57,32 @@ const Hero = () => {
 
 export default Hero;
 
-const AnimatedHeroTitle = (props: { title: string }) => {
-  const { title } = props;
+// props: { title: string }
+// const { title } = props;
+const AnimatedHeroTitle = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "anticipate" }}
-      className="text-3xl md:text-5xl px-2 md:px-10 font-semibold mb-6 md:min-w-[550px] max-w-[700px] mx-auto text-primary-content ">
-      <motion.div
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, bounce: true, delay: 0.5 }}>
-        <SparklesIcon
-          size={40}
-          className="absolute hidden md:flex -top-12 -right-2 "
-        />
-      </motion.div>
-      {title}
+      className="text-3xl md:text-5xl px-2 md:px-8 font-semibold mb-6 md:min-w-[550px] max-w-[500px] md:max-w-[750px] mx-auto text-primary-content ">
+      <div className="flex flex-col gap-2 items-center justify-center">
+        <span className="flex flex-row gap-2 md:gap-4 items-center justify-center">Ready to find a job? 💼</span>
+        <span>Meet the AI✨ solution that requires minimum effort. </span>
+      </div>
     </motion.div>
   );
 };
+// <motion.div
+//   initial={{ opacity: 0, y: 0 }}
+//   animate={{ opacity: 1, y: 0 }}
+//   transition={{ duration: 1, bounce: true, delay: 0.5 }}>
+//   <SparklesIcon
+//     size={40}
+//     className="absolute hidden md:flex -top-12 -right-2 "
+//   />
+// </motion.div>
+// {title}
 
 const AnimatedBodyText = (props: { text: string }) => {
   const { text } = props;
