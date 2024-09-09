@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import Section from "../Section";
 
 const Reviews = () => {
-  let [ref, { width }] = useMeasure();
+  const [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(0);
   const FAST_DURATION = 35;
   const SLOW_DURATION = 75;
@@ -20,7 +20,7 @@ const Reviews = () => {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 8;
+    const finalPosition = -width / 2 - 8;
 
     if (mustFinish) {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
@@ -77,7 +77,7 @@ const Reviews = () => {
         href="https://chromewebstore.google.com/detail/worksyncai-browser-extens/fhgalfkajbagfafnfofdkpamchjhfgce?hl=en"
         target="_blank"
         rel="noopener noreferrer">
-        <Button size={"lg"} className="w-full h-full gap-2">
+        <Button size={"lg"} className="gap-2">
           <span>See all reviews</span>
           <OutGoingLinkIcon stroke="currentColor" />
         </Button>

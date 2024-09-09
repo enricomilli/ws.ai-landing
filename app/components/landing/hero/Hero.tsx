@@ -3,7 +3,6 @@ import { ScrollParallax } from "react-just-parallax";
 import Notification from "./Notification";
 import { HeroContent } from "@/constants/constants";
 import Section from "../Section";
-// import { AnimatedText } from "./AnimateText";
 import { Link } from "@remix-run/react";
 import { Button } from "@/components/ui/button";
 import { VideoPopup } from "./VideoPopup";
@@ -66,7 +65,7 @@ const AnimatedHeroTitle = (props: { title: string }) => {
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "anticipate" }}
-      className="text-4xl md:text-5xl md:px-10 font-semibold mb-6 md:min-w-[550px] max-w-[700px] mx-auto text-primary-content ">
+      className="text-3xl md:text-5xl px-2 md:px-10 font-semibold mb-6 md:min-w-[550px] max-w-[700px] mx-auto text-primary-content ">
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
