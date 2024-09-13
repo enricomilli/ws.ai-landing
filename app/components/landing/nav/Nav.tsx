@@ -44,9 +44,8 @@ const Navigation = (props: { openNavigation: boolean, handleClick: () => void })
     const { openNavigation, handleClick } = props;
     return (
         <div
-            className={`transition-all duration-250 lg:visible lg:opacity-100 lg:-translate-y-0 lg:mx-0 lg:w-auto lg:static lg:flex lg:bg-transparent lg:border-none  ${
-                openNavigation ? "flex" : "invisible opacity-0 -translate-y-10"
-            } fixed top-[4.7rem] md:top-[6rem] w-fit h-fit right-[3.5vw] bottom-0 bg-base-200 rounded-xl bg-background border border-neutral`}>
+            className={`transition-all duration-250 lg:visible lg:opacity-100 lg:-translate-y-0 lg:mx-0 lg:w-auto lg:static lg:flex lg:bg-transparent lg:border-none  ${openNavigation ? "flex" : "invisible opacity-0 -translate-y-10"
+                } fixed top-[4.7rem] md:top-[6rem] w-fit h-fit right-[3.5vw] bottom-0 bg-base-200 rounded-xl bg-background border border-neutral`}>
             <div className="w-fit relative z-10 flex flex-col gap-2 lg:flex-row p-3 lg:p-0">
                 {navigation.map((item, index) => (
                     <NavLink
@@ -87,7 +86,7 @@ const NavLink = (props: {
 
 const LoginButton = () => (
     <Link
-        to="https://www.worksync.ai/login"
+        to="https://app.worksync.ai/login"
         className="hidden lg:flex">
         <Button
             variant={"outline"}
