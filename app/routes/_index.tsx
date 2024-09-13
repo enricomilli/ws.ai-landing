@@ -9,47 +9,33 @@ import FAQs from "@/components/landing/faqs/FAQs";
 import Footer from "@/components/landing/Footer";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "WorkSync.AI" },
-    { name: "description", content: "Ready to find a job? Meet your AI solution." },
-  ];
+    return [
+        { title: "WorkSync.AI" },
+        { name: "description", content: "Ready to find a job? Meet your AI solution." },
+    ];
 };
 
 export default function Index() {
-  return (
-    <div className="w-screen h-screen">
-      <LandingPage />
-    </div>
-  );
+    return (
+        <div className="w-screen h-screen">
+            <LandingPage />
+        </div>
+    );
 }
 
 const LandingPage = () => {
-  return (
-    <>
-      <div className="overflow-hidden mt-20">
-        <Hero />
-        <HeroProof />
-        <Reviews />
-        <Features />
-        <StepsToDownload />
-        <Pricing />
-        <FAQs />
-      </div>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <div className="overflow-hidden mt-20">
+                <Hero />
+                <HeroProof />
+                <Reviews />
+                <Features />
+                <StepsToDownload />
+                <Pricing />
+                <FAQs />
+            </div>
+            <Footer />
+        </>
+    );
 };
-
-{
-  /* <div className="overflow-hidden -mt-[96px]">
-  <Hero />
-  <HeroProof />
-  <SpotlightSection />
-  <Reviews />
-  <Features />
-  <HowItWorks />
-  <Pricing />
-  <FAQs />
-</div>
-<Footer /> */
-}
