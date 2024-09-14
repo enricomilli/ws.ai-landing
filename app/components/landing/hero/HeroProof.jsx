@@ -11,7 +11,7 @@ const HeroProof = () => {
                 </h3>
                 <div className="w-full md:w-[35rem] border border-primary-foreground rounded-2xl shadow-xl p-10 bg-primary-foreground/40">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <div className="h-fit w-fit rounded-full overflow-hidden self-center bg-orange-400">
+                        <div className="h-fit w-fit rounded-full overflow-hidden self-center">
                             <img
                                 src={HeroProofContent.personImg}
                                 alt="user profile"
