@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </head>
             <body>
                 <noscript><iframe title="google" src="https://www.googletagmanager.com/ns.html?id=GTM-5W4VRJNX" height="0" width="0" className="hidden invisible"></iframe></noscript>
-                {process.env.NODE_ENV !== "development" || !gaTrackingId ? null : (
+                {process.env.NODE_ENV === "development" || !gaTrackingId ? null : (
                     <>
                         <script
                             async
