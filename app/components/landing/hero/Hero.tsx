@@ -67,8 +67,8 @@ const AnimatedHeroTitle = () => {
             transition={{ duration: 0.7, ease: "anticipate" }}
             className="text-3xl md:text-5xl px-2 md:px-8 font-semibold mb-6 md:min-w-[550px] max-w-[500px] md:max-w-[750px] mx-auto text-primary-content ">
             <div className="flex flex-col gap-2 items-center justify-center">
-                <span className="flex flex-row gap-2 md:gap-4 items-center justify-center">Ready to find a job? 💼</span>
-                <span>Meet the AI✨ solution that requires minimum effort. </span>
+                <span className="flex flex-row gap-2 md:gap-4 items-center justify-center">{HeroContent.title1}</span>
+                <span>{HeroContent.title2} </span>
             </div>
         </motion.div>
     );
