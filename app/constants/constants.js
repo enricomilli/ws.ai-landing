@@ -48,8 +48,9 @@ export const navigation = [
 ];
 
 export const HeroContent = {
-    title1: "Ready to find a job? 💼",
-    title2: "Meet the AI✨ solution that requires minimum effort.",
+    title1: "Take the 💩 out of job applications.",
+    // title1: "Ready to find a job? 💼",
+    title2: "Meet the AI✨ that takes the 💩 out of job applications.",
     callout: `Our AI-powered extension significantly speeds up your job application process. Your time should be spent preparing for and smashing job interviews, not filling out repetitive forms.`,
     callToAction: "Try it now",
     seeMoreLink: "See it in action →",

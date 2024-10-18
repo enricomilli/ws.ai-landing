@@ -22,6 +22,46 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                    (() => {
+                      const applyTheme = (theme) => {
+                        const root = document.documentElement;
+                        root.classList.remove('light', 'dark');
+                        root.classList.add(theme);
+                        root.style.colorScheme = theme;
+                      };
+
+                      const getSystemTheme = () => {
+                        const darkModeQuery = '(prefers-color-scheme: dark)';
+                        return window.matchMedia(darkModeQuery).matches ? 'dark' : 'light';
+                      };
+
+                      try {
+                        const storedTheme = localStorage.getItem('vite-ui-theme');
+
+                        if (!storedTheme) {
+                          // Default to dark mode if no theme is specified
+                          applyTheme('dark');
+                        } else if (storedTheme === 'system') {
+                          applyTheme(getSystemTheme());
+                        } else if (storedTheme === 'light' || storedTheme === 'dark') {
+                          applyTheme(storedTheme);
+                        }
+
+                        // Listen for system theme changes
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                          if (storedTheme === 'system') {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                          }
+                        });
+                      } catch (error) {
+                        console.error('Error applying theme:', error);
+                      }
+                    })();
+
+                  `
+                }} />
                 <Meta />
                 <Links />
             </head>

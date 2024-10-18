@@ -77,7 +77,7 @@ const NavLink = (props: {
             className={`${item.onlyMobile ? "lg:hidden" : ""} w-full`}>
             <Button
                 variant={"ghost"}
-                onMouseDown={handleClick}>
+                onClick={handleClick}>
                 {item.title}
             </Button>
         </Link>
