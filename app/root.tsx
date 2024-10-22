@@ -1,4 +1,4 @@
-import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteError } from "@remix-run/react";
+import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, useNavigate } from "@remix-run/react";
 import "@/tailwind.css";
 import { ThemeProvider } from "./context/ThemeProvider";
 import Loading from "@/components/Loading";
@@ -92,20 +92,23 @@ export function HydrateFallback() {
 }
 
 export function ErrorBoundary() {
-    const error = useRouteError();
+    const navigate = useNavigate();
 
-    console.error(error);
+    useEffect(() => {
+        navigate('/', { replace: true });
+    }, [navigate]);
+
     return (
         <html lang="en">
             <head>
-                <title>Oh no!</title>
+                <title>404 - Page Not Found</title>
                 <Meta />
                 <Links />
             </head>
             <body>
                 <div className="grid h-screen place-content-center bg-white px-4">
                     <div className="text-center">
-                        <h1 className="text-9xl font-black text-gray-200">404</h1>
+                        <h1 className="text-9xl font-black text-gray-200">404 - Page Not Found</h1>
 
                         <p className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Uh-oh!</p>
 
