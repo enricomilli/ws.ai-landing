@@ -22,7 +22,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <script defer data-domain="worksync.ai" src="https://plausible-analytics-ce-production-000e.up.railway.app/js/script.file-downloads.hash.outbound-links.js"></script>
+                <script defer data-domain="worksync.ai" src="https://analytics.subpact.app/js/script.js"></script>
                 <script dangerouslySetInnerHTML={{
                     __html: `
                     (() => {
