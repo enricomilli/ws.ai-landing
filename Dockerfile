@@ -1,26 +1,26 @@
-# Use an official Node.js runtime as the base image
-FROM node:20-alpine
-
-# Set the working directory in the container
+# Stage 1: Build the SPA
+FROM node:20-alpine as build
 WORKDIR /app
-
-# Copy package.json and package-lock.json (if available)
 COPY package*.json ./
-
-# Install dependencies
 RUN npm ci
-
-# Copy the rest of the application code
 COPY . .
-
-# Build the application
 RUN npm run build
 
-# Install a simple HTTP server to serve static content
-RUN npm install -g http-server
+# Stage 2: Serve with Nginx
+FROM nginxinc/nginx-unprivileged:1.25-alpine
+COPY --from=build /app/build/client /usr/share/nginx/html
 
-# Expose the port the app runs on
-EXPOSE 3000
+# Remove default nginx config
+USER root
+RUN rm /etc/nginx/conf.d/default.conf
 
-# Command to run the application
-CMD ["http-server", "--proxy", "http://0.0.0.0:3000?", "--no-dotfiles", "build/client", "-p", "3000", "-a", "0.0.0.0"]
+# Add custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Set proper permissions
+RUN chown -R nginx:nginx /usr/share/nginx/html && \
+    chmod -R 755 /usr/share/nginx/html
+
+USER nginx
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]

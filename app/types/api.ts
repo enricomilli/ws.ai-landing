@@ -1,4 +1,3 @@
-
 export interface ApplicationsSubmittedResponse {
-  totalApplications: number
+    totalApplications: number
 }
