@@ -15,7 +15,7 @@ const Nav = () => {
 
     return (
         <div
-            className={`border-neutral motion-preset-slide-down-lg fixed left-0 right-0 top-3 z-50 mx-auto flex w-[93vw] items-center gap-2 rounded-xl border bg-background/80 px-5 py-5 motion-delay-1000 max-lg:py-4 md:top-4 lg:w-[90vw] lg:px-[45px] 2xl:px-[65px]`}
+            className={`border-neutral motion-preset-slide-down-lg fixed left-0 right-0 top-3 z-50 mx-auto flex w-[93vw] items-center gap-2 rounded-xl border bg-background/80 px-5 py-5 backdrop-blur-[8px] motion-delay-1000 max-lg:py-4 md:top-4 lg:w-[90vw] lg:px-[45px] 2xl:px-[65px]`}
         >
             <Logo />
             <Navigation openNavigation={openNavigation} handleClick={handleClick} />

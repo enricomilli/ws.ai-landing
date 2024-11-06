@@ -63,9 +63,7 @@ const AnimatedVideoDiv = (props: { videoSrc: string; thumbnailSrc: string }) => 
     const { videoSrc, thumbnailSrc } = props
 
     return (
-        <div
-            className='relative mx-auto flex flex-col px-4 motion-duration-[1500ms] motion-delay-[750ms] motion-ease-out-cubic motion-translate-y-in-[30%] motion-opacity-in-0 md:max-w-6xl md:px-6 lg:mt-[1.5rem]'
-        >
+        <div className='relative mx-auto flex flex-col px-4 motion-duration-1000 motion-delay-1000 motion-translate-y-in-[30%] motion-opacity-in-0 md:max-w-6xl md:px-6 lg:mt-[1.5rem]'>
             <div className='relative rounded-xl bg-foreground p-[2px]'>
                 <div className='relative rounded-xl'>
                     <ScrollParallax isAbsolutelyPositioned>
@@ -98,10 +96,12 @@ const NumOfAppsSubmitted = () => {
     const [appsSubmitted, setAppsSubmitted] = useState(0)
 
     useEffect(() => {
-        (async () => {
+        const getApplications = async () => {
             const res = await GetApplicationsSubmitted()
             setAppsSubmitted(res)
-        })()
+        }
+
+        getApplications()
     }, [])
 
     return (
