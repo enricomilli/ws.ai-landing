@@ -26,7 +26,7 @@ const Hero = () => {
                     <AnimatedVideoDiv videoSrc={HeroContent.video} thumbnailSrc={HeroContent.thumbnail} />
                     <NumOfAppsSubmitted />
                     <span className='mx-auto flex flex-row items-center justify-center gap-5'>
-                        <Link to='https://app.worksync.ai/purchase' className='h-full w-full'>
+                        <Link to='https://app.worksync.ai/onboard' className='h-full w-full'>
                             <Button size={'lg'} className=''>
                                 {HeroContent.callToAction}
                             </Button>

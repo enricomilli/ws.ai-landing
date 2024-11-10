@@ -175,7 +175,7 @@ export const monthlyPricing = {
         'Cancelable at anytime.',
     ],
     buttonText: 'Try it now',
-    url: 'https://app.worksync.ai/purchase?subscription=monthly',
+    url: 'https://app.worksync.ai/onboard?type=monthly',
 }
 
 export const weeklyPricing = {
@@ -192,7 +192,7 @@ export const weeklyPricing = {
         'Cancelable at anytime.',
     ],
     buttonText: 'Try it now',
-    url: 'https://app.worksync.ai/purchase?subscription=weekly',
+    url: 'https://app.worksync.ai/onboard?type=weekly',
 }
 
 export const FAQsContent = [

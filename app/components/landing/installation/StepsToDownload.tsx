@@ -82,7 +82,7 @@ const StepsToDownload = () => {
                                 <p className='body-2 w-full'>Get a nice return on your investment</p>
                             </div>
                         </motion.li>
-                        <Link to='https://app.worksync.ai/purchase' className='w-full md:w-fit'>
+                        <Link to='https://app.worksync.ai/onboard' className='w-full md:w-fit'>
                             <Button size={'lg'}>Try it now</Button>
                         </Link>
                     </ul>
