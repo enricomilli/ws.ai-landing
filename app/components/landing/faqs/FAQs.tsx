@@ -4,7 +4,7 @@ import { Link } from '@remix-run/react'
 
 const FAQs = () => {
     return (
-        <div className='mx-auto mb-20 flex w-full flex-col items-center justify-center gap-5 px-6 pb-10 md:w-3/4 xl:w-1/2'>
+        <div className='not-hero mx-auto mb-20 flex w-full flex-col items-center justify-center gap-5 px-6 pb-10 md:w-3/4 xl:w-1/2'>
             <h2 className='mb-2 text-center text-3xl font-semibold'>Frequently Asked Questions</h2>
             <Accordion type='single' collapsible className='w-full'>
                 {FAQsContent.map((FAQ, index) => (

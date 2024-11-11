@@ -25,7 +25,7 @@ const Hero = () => {
                     </div>
                     <AnimatedVideoDiv videoSrc={HeroContent.video} thumbnailSrc={HeroContent.thumbnail} />
                     <NumOfAppsSubmitted />
-                    <span className='mx-auto flex flex-row items-center justify-center gap-5'>
+                    <span className='not-hero mx-auto flex flex-row items-center justify-center gap-5'>
                         <Link to='https://app.worksync.ai/onboard' className='h-full w-full'>
                             <Button size={'lg'} className=''>
                                 {HeroContent.callToAction}
@@ -105,7 +105,7 @@ const NumOfAppsSubmitted = () => {
     }, [])
 
     return (
-        <div className='mx-auto flex flex-col items-center justify-center gap-2 text-xl'>
+        <div className='not-hero mx-auto flex flex-col items-center justify-center gap-2 text-xl'>
             <span>Number of Job Apps Submitted:</span>
             <span className='font-semibold'>
                 {appsSubmitted > 0 && <AnimatedCounter from={0} to={appsSubmitted} />}

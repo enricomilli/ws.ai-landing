@@ -45,7 +45,7 @@ const Reviews = () => {
     }, [xTranslation, width, duration, rerender, mustFinish])
 
     return (
-        <Section className='flex flex-col items-center justify-center gap-10' id='reviews'>
+        <Section className='not-hero flex flex-col items-center justify-center gap-10' id='reviews'>
             <h3 className='text-primary-content text-center text-2xl font-semibold'>More satisfied customers:</h3>
             <div className='container h-fit min-h-[200px] md:min-h-[210px]'>
                 <motion.div

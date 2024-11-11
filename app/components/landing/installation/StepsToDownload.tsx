@@ -9,7 +9,7 @@ const StepsToDownload = () => {
     const iconSize = 30
     return (
         <Section crosses={true} id='how-it-works' className='z-10'>
-            <div className='mx-auto flex flex-col-reverse justify-around gap-5 md:items-center lg:flex-row'>
+            <div className='not-hero mx-auto flex flex-col-reverse justify-around gap-5 md:items-center lg:flex-row'>
                 <div>
                     <h1 className='mb-8 text-3xl font-semibold'>Its as easy as</h1>
                     <ul className='flex h-[400px] w-full max-w-[900px] flex-col place-items-start justify-start gap-10'>

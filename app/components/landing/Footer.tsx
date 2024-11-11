@@ -5,7 +5,7 @@ import WSIcon from '@/assets/svg/WSIcon'
 
 const Footer = () => {
     return (
-        <Section crosses className={`!py-10 px-14 md:px-24 lg:px-32`}>
+        <Section crosses className={`not-hero !py-10 px-14 md:px-24 lg:px-32`}>
             <div className='mx-auto flex w-full items-center justify-center gap-10 max-sm:flex-col-reverse max-sm:gap-6 sm:justify-between'>
                 <p className='flex w-[300px] flex-row flex-nowrap items-center justify-start gap-5'>
                     <WSIcon className='h-10 w-10 fill-current' />© {new Date().getFullYear()} All rights reserved.
@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
 
                 <ul className={`flex w-[300px] flex-wrap items-end justify-end gap-5`}>
-                    {socials.map(item => (
+                    {socials.map((item) => (
                         <Link
                             to={item.url}
                             key={item.id}

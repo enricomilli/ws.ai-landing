@@ -14,7 +14,7 @@ const Pricing = () => {
 
     return (
         <Section id='pricing'>
-            <div className='z-2 relative w-full py-20'>
+            <div className='not-hero z-2 relative w-full py-20'>
                 <div className='pointer-events-none relative mb-[6.5rem] flex justify-center lg:flex'>
                     <ScrollParallax isAbsolutelyPositioned>
                         <div className='z-1 pointer-events-none absolute left-1/2 top-[40%] w-[60rem] -translate-x-1/2 -translate-y-1/2'>

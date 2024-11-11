@@ -5,7 +5,7 @@ import RatingStars from '../reviews/Stars'
 const HeroProof = () => {
     return (
         <Section>
-            <div className='flex flex-col items-center justify-center gap-10'>
+            <div className='not-hero flex flex-col items-center justify-center gap-10'>
                 <h3 className='text-primary-content -mb-5 text-center text-3xl font-semibold md:mb-0'>
                     {HeroProofContent.caseTitle}
                 </h3>

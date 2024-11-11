@@ -4,7 +4,7 @@ import Section from '../Section'
 const Features = () => {
     return (
         <Section id='how-it-works'>
-            <div className='z-2 relative mx-auto flex flex-col items-center justify-center gap-7 lg:px-[4rem]'>
+            <div className='not-hero z-2 relative mx-auto flex flex-col items-center justify-center gap-7 lg:px-[4rem]'>
                 <h2 className='text-primary-content text-3xl font-semibold'>How it works</h2>
                 <div className='mb-10 flex flex-col flex-wrap items-center justify-center gap-10 lg:gap-14 xl:gap-20'>
                     {features.map((item, index) => (
