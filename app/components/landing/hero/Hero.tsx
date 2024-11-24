@@ -43,7 +43,7 @@ export default Hero
 
 const NewHeroTitle = () => {
     return (
-        <div className='text-primary-content mx-auto mb-6 max-w-[500px] px-2 text-3xl font-semibold motion-duration-[1.00s]/blur motion-duration-[1.00s]/opacity motion-translate-x-in-[0%] motion-translate-y-in-[-50%] motion-blur-in-[1px] motion-opacity-in-[60%] md:min-w-[500px] md:max-w-[650px] md:px-8 md:text-5xl'>
+        <div className='text-primary-content mx-auto mb-6 max-w-[500px] px-5 text-4xl font-semibold motion-duration-[1.00s]/blur motion-duration-[1.00s]/opacity motion-translate-x-in-[0%] motion-translate-y-in-[-50%] motion-blur-in-[1px] motion-opacity-in-[60%] md:min-w-[400px] md:max-w-[650px] md:px-8 md:text-5xl'>
             {HeroContent.title2}
         </div>
     )

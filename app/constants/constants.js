@@ -48,10 +48,10 @@ export const navigation = [
 ]
 
 export const HeroContent = {
-    title1: 'Take the 💩 out of job applications.',
+    title2: 'Make your job search a breeze 💨 by using AI ✨',
     // title1: "Ready to find a job? 💼",
-    title2: 'Meet the AI✨ that takes the 💩 out of job applications.',
-    callout: `Our AI-powered extension significantly speeds up your job application process. Your time should be spent preparing for and smashing job interviews, not filling out repetitive forms.`,
+    // title2: 'Meet the AI✨ that takes the 💩 out of job applications.',
+    callout: `Our AI-powered extension significantly improves and speeds up your job applications. Your time should be spent preparing for and smashing job interviews, not filling out repetitive forms.`,
     callToAction: 'Try it now',
     seeMoreLink: 'See it in action →',
     video: ApplyBotDemoVideo,
@@ -113,7 +113,7 @@ export const reviews = [
 export const features = [
     {
         title: 'Apply To Dozens Of Relevant Jobs In Seconds With 1 Click',
-        text: 'ApplyBot searches and applies to relevant LinkedIn EasyApply jobs with 1 click. It will continue applying until you stop it, or until it reaches the end of the search results. If you want to make sure its responses are correct, control the speed in the settings. Apply to the newest job opportunities efficiently and effortlessly.',
+        text: 'Apply to the newest job opportunities efficiently and effortlessly by using our 1 click auto apply. Our extension searches and applies to relevant LinkedIn Easy Apply jobs automatically and will continue applying until you stop it, or until it reaches the end of the search results.',
         actionText: "What's next?",
         backgroundUrl: '',
         iconUrl: Sparkles,
